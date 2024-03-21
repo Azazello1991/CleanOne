@@ -75,7 +75,7 @@
       left: 0;
       height: 100%;
       width: 20px;
-      background-image: url('../../images/sprite.svg#Phone');
+      background-image: url('../images/sprite.svg#Phone');
       background-position: center;
       background-repeat: no-repeat;
       background-size: 22px;
@@ -113,15 +113,15 @@
    }
 
    &__netsork--instagram::after {
-      background-image: url('../../images/sprite.svg#instagram');
+      background-image: url('../images/sprite.svg#instagram');
    }
 
    &__netsork--telegram::after {
-      background-image: url('../../images/sprite.svg#telegram');
+      background-image: url('../images/sprite.svg#telegram');
    }
 
    &__netsork--viber::after {
-      background-image: url('../../images/sprite.svg#viber');
+      background-image: url('../images/sprite.svg#viber');
       background-size: 30px;
    }
 

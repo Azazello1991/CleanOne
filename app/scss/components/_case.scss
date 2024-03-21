@@ -55,19 +55,19 @@
       }
 
       &--bubbles::after {
-         background-image: url('../../images/sprite.svg#bubbles');
+         background-image: url('../images/sprite.svg#bubbles');
       }
 
       &--security::after {
-         background-image: url('../../images/sprite.svg#security');
+         background-image: url('../images/sprite.svg#security');
       }
 
       &--vaccum-cleaner::after {
-         background-image: url('../../images/sprite.svg#vaccum-cleaner');
+         background-image: url('../images/sprite.svg#vaccum-cleaner');
       }
 
       &--stars::after {
-         background-image: url('../../images/sprite.svg#stars');
+         background-image: url('../images/sprite.svg#stars');
       }
    }
 
@@ -191,15 +191,15 @@
 }
 
 .case-1 {
-   background-image: url('../../images/sofa-yellow.webp');
+   background-image: url('../images/sofa-yellow.webp');
 }
 
 .case-2 {
-   background-image: url('../../images/case-1.webp');
+   background-image: url('../images/case-1.webp');
 }
 
 .case-3 {
-   background-image: url('../../images/case-2.webp');
+   background-image: url('../images/case-2.webp');
 }
 
 .case-4 {
@@ -207,5 +207,5 @@
 }
 
 .case-5 {
-   background-image: url('../../images/case-4.webp');
+   background-image: url('../images/case-4.webp');
 }

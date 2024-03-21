@@ -57,15 +57,15 @@
    }
 
    &__item--one::after {
-      background-image: url('../../images/sprite.svg#01');
+      background-image: url('../images/sprite.svg#01');
    }
 
    &__item--two::after {
-      background-image: url('../../images/sprite.svg#02');
+      background-image: url('../images/sprite.svg#02');
    }
 
    &__item--three::after {
-      background-image: url('../../images/sprite.svg#03');
+      background-image: url('../images/sprite.svg#03');
    }
 
    &__icon {
@@ -90,13 +90,13 @@
       }
 
    &__icon--health::after {
-      background-image: url('../../images/sprite.svg#health');
+      background-image: url('../images/sprite.svg#health');
    }
    &__icon--economy::after {
-      background-image: url('../../images/sprite.svg#economy');
+      background-image: url('../images/sprite.svg#economy');
    }
    &__icon--broom::after {
-      background-image: url('../../images/sprite.svg#broom');
+      background-image: url('../images/sprite.svg#broom');
    }
 
    &__text {
