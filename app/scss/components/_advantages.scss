@@ -1,0 +1,117 @@
+.advantages {
+   padding: 50px 0 70px;
+
+   &__title {
+      font-weight: 600;
+      font-size: 36px;
+      max-width: 80%;
+      margin: 0 auto;
+      text-align: center;
+      margin-bottom: 15px;
+
+      @include r(992) {
+         font-size: 28px;
+      }
+      @include r(768) {
+         font-size: 22px;
+      }
+   }
+
+   &__subtitle {
+      display: block;
+      font-size: 20px;
+      text-align: center;
+      margin-bottom: 35px;
+
+   }
+
+   &__list {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+   }
+
+   &__item {
+      position: relative;
+      display: flex;
+      column-gap: 18px;
+      max-width: 360px;
+      padding: 17px;
+      border: 1px solid $ocean;
+      background: rgb(229, 243, 255);
+      background: linear-gradient(297deg, rgba(229, 243, 255, 1) 50%, rgba(240, 240, 240, 1) 100%);
+      border-radius: 10px 10px 0 0;
+
+      &::after {
+         content: '';
+         position: absolute;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         background-size: 100px;
+         background-position: 90% 100%;
+         background-repeat: no-repeat;
+      }
+   }
+
+   &__item--one::after {
+      background-image: url('../../images/sprite.svg#01');
+   }
+
+   &__item--two::after {
+      background-image: url('../../images/sprite.svg#02');
+   }
+
+   &__item--three::after {
+      background-image: url('../../images/sprite.svg#03');
+   }
+
+   &__icon {
+      position: relative;
+      min-width: 56px;
+      height: 56px;
+      background-color: #ffffff;
+      border-radius: 5px;
+      box-shadow: 0 4px 6px 0 #00000017;
+   }
+
+      &__icon::after {
+         content: '';
+         position: absolute;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         background-size: 70px;
+         background-position: center;
+         background-repeat: no-repeat;
+      }
+
+   &__icon--health::after {
+      background-image: url('../../images/sprite.svg#health');
+   }
+   &__icon--economy::after {
+      background-image: url('../../images/sprite.svg#economy');
+   }
+   &__icon--broom::after {
+      background-image: url('../../images/sprite.svg#broom');
+   }
+
+   &__text {
+      max-width: 250px;
+      padding-top: 25px;
+   }
+
+   &__item-title {
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 5px;
+   }
+
+   &__description {
+      font-size: 14px;
+      line-height: 1.7;
+   }
+}

@@ -1,0 +1,63 @@
+.footer {
+   font-size: 12px;
+   font-weight: 500;
+   background-color: #FAFAFA;
+   padding: 15px 0;
+   
+   &__flex {
+      display: flex;
+      justify-content: space-between;
+      gap: 30px;
+      align-items: center;
+      
+      @include r(768) {
+         flex-wrap: wrap;
+         order: 3;
+      }
+   }
+
+   .logo {
+      order: 1;
+   }
+
+   &__text {
+      order: 2;
+
+      @include r(768) {
+         order: 3;
+      }
+   }
+
+   &__schedule {
+      display: flex;
+      flex-direction: column;
+      row-gap: 10px;
+      order: 3;
+
+      @include r(992) {
+         order: 2;
+      }
+   }
+
+   &__time {
+      position: relative;
+      padding-left: 20px;
+
+      &::after {
+         content: '';
+         position: absolute;
+         top: 0;
+         left: 0;
+         width: 20px;
+         height: 100%;
+         background-image: url('../../images/sprite.svg#clock');
+         background-repeat: no-repeat;
+         background-size: 25px;
+         background-position: center;
+      }
+   }
+
+   &__every-day {}
+
+   &__master {}
+}

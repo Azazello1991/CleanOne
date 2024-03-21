@@ -1,0 +1,130 @@
+
+.burger {
+   width: 40px;
+   height: 30px;
+   position: relative;
+   background-color: transparent;
+   border: 0px solid transparent;
+   cursor: pointer;
+}
+
+.burger__line {
+   position: absolute;
+   left: 0;
+   top: 50%;
+   transform: translateY(-50%);
+   width: 100%;
+   height: 4px;
+   border-radius: 2px;
+   background-color: $eco-ocean;
+   transition: transform 0.3s ease-in-out;
+}
+
+.burger::before,
+.burger::after {
+   content: "";
+   position: absolute;
+   left: 0;
+   width: 100%;
+   height: 4px;
+   border-radius: 52px;
+   background-color: $eco-ocean;
+   transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
+}
+
+.burger::before {
+   top: 0;
+}
+
+.burger::after {
+   top: calc(100% - 2px);
+}
+
+.burger--active .burger__line {
+   transform: scale(0);
+   transition: transform 0.3s ease-in-out;
+}
+
+.burger--active::before {
+   transform: rotate(45deg);
+   top: 50%;
+   transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
+}
+
+.burger--active::after {
+   transform: rotate(-45deg);
+   top: 50%;
+   transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
+}
+
+// ------------------- mobyle-menu --------------------- //
+
+.mobile-menu {
+   position: fixed;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   row-gap: 20px;
+   left: -200%;
+   top: 0;
+   width: 0;
+   height: 100vh;
+   height: 100svh;
+   padding: 0 15px;
+   padding-top: 10%;
+   background: rgb(251, 248, 248);
+   background: linear-gradient(0deg, rgba(251, 248, 248, 1) 53%, rgba(135, 203, 231, 1) 100%);
+   background-repeat: no-repeat;
+   background-position: left bottom;
+   transition: all 0.5s ease-in-out;
+   overflow-y: scroll;
+   z-index: 3;
+
+   &__nav {
+      display: flex;
+      flex-direction: column;
+      row-gap: 40px;
+      padding: 30px 30px;
+      border: 3px solid $hoverColor;
+      border-radius: 9px;
+      width: 300px;
+      background: url('../../images/gradient-card-bg.webp'), #ffffff;
+      background-position: 100% 100%;
+      background-repeat: no-repeat;
+
+      & .mobile-link {
+
+         &:active {
+            border-bottom: 2px solid $hoverColor;
+         }
+      }
+   }
+
+   &__contacts {
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      row-gap: 40px;
+      padding: 30px 30px;
+      border: 3px solid $hoverColor;
+      border-radius: 9px;
+      width: 300px;
+      background: url('../../images/gradient-card-bg.webp'), #ffffff;
+      background-position: 100% 100%;
+      background-repeat: no-repeat;
+   }
+
+   &__networks {
+      column-gap: 40px;
+
+      .nav__netsork {
+         // padding: 20px;
+      }
+   }
+
+   &--active {
+      left: 0;
+      width: 100%;   
+   }
+}

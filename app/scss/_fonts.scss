@@ -1,0 +1,38 @@
+/* Light 300; Regular 400; Medium 500; SemiBold 600; Bold 700; ExtraBold 800; Black 900*/
+/* @extend %roboto-300;*/
+@font-face {
+   font-family: 'Rubik-700';
+   font-weight: 700;
+   font-style: italic;
+   src: url('../fonts/Rubik-Bold.woff2') format('woff2'),
+   url('../fonts/Rubik-Bold.woff') format('woff');
+   font-display: swap;
+}
+
+@font-face {
+   font-family: 'Rubik-600';
+   font-weight: 600;
+   font-style: normal;
+   src: url('../fonts/Rubik-SemiBold.woff2') format('woff2'),
+      url('../fonts/Rubik-SemiBold.woff') format('woff');
+   font-display: swap;
+}
+
+@font-face {
+   font-family: 'Rubik-500';
+   font-weight: 500;
+   font-style: normal;
+   src: url('../fonts/Rubik-Medium.woff2') format('woff2'),
+   url('../fonts/Rubik-Medium.woff') format('woff');
+   font-display: swap;
+}
+
+@font-face {
+   font-family: 'Rubik-400';
+   font-weight: 400;
+   font-style: normal;
+   src: url('../fonts/Rubik-Regular.woff2') format('woff2'),
+      url('../fonts/Rubik-Regular.woff') format('woff');
+   font-display: swap;
+}
+

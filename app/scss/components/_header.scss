@@ -1,0 +1,158 @@
+.header {
+
+   position: sticky;
+   top: 0;
+   left: 0;
+   right: 0;
+   padding: 25px 0;
+   background-color: #ffffff;
+   z-index: 99;
+
+   @include r(768) {
+      padding: 18px;
+   }
+
+   .burger {
+      display: none;
+
+      @include r(768) {
+         display: block;
+      }
+   }
+}
+
+.nav {
+   display: flex;
+   flex-wrap: wrap;
+   column-gap: 30px;
+   row-gap: 20px;
+   justify-content: space-between;
+   align-items: center;
+
+   &__buttons {
+      max-width: 400px;
+      display: flex;
+      column-gap: 35px;
+
+      @include r(768) {
+         display: none;
+      }
+   }
+
+   &__link {
+      @extend %Rubik-500;
+      color: $titleColor;
+      transition: all 0.3s ease-in-out;
+   }
+
+   &__networks {
+      display: flex;
+      column-gap: 8px;
+   }
+
+   &__contacts {
+      display: flex;
+      column-gap: 20px;
+      align-items: center;
+
+      @include r(768) {
+         display: none;
+      }
+   }
+
+   &__tel {
+      color: $titleColor;
+      @extend %Rubik-600;
+      position: relative;
+      padding-left: 25px;
+      transition: all 0.3s ease-in-out;
+   }
+
+   &__tel::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 20px;
+      background-image: url('../../images/sprite.svg#Phone');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 22px;
+   }
+
+   &__netsork {
+      position: relative;
+      border-radius: 50%;
+      width: 25px;
+      height: 25px;
+      box-shadow: 0 3px 6px 0 #0000001C;
+      cursor: pointer;
+
+      & a {
+         display: block;
+         width: 100%;
+         height: 100%;
+      }
+   }
+
+   &__netsork::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 25px;
+      height: 25px;
+      background-position: center;
+      border-radius: 50%;
+      border: 1px solid transparent;
+      background-size: 25px;
+      background-repeat: no-repeat;
+      transition: all 0.3s ease-in-out;
+      filter: invert(48%) sepia(100%) saturate(2277%) hue-rotate(149deg) brightness(100%) contrast(99%);
+   }
+
+   &__netsork--instagram::after {
+      background-image: url('../../images/sprite.svg#instagram');
+   }
+
+   &__netsork--telegram::after {
+      background-image: url('../../images/sprite.svg#telegram');
+   }
+
+   &__netsork--viber::after {
+      background-image: url('../../images/sprite.svg#viber');
+      background-size: 30px;
+   }
+
+   &__netsork:hover::after {
+      filter: invert(10%) sepia(15%) saturate(6659%) hue-rotate(340deg) brightness(111%) contrast(101%);
+      border: 1px solid $hoverColor;
+      border-radius: 50%;
+   }
+
+   &__lgs {
+      display: flex;
+      column-gap: 20px;
+   }
+
+   &__lg.active {
+      color: #DBE3EF;
+   }
+
+   &__lg {
+      color: $titleColor;
+      @extend %Rubik-600;
+      background-color: transparent;
+      border: transparent 1px solid;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+   }
+
+}
+
+.logo {
+   max-width: 160px;
+   max-height: 36px;
+   object-fit: contain;
+}

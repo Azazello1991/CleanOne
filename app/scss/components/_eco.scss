@@ -1,0 +1,204 @@
+.eco {
+   position: relative;
+   background: url('../../images/bg.webp') center / contain no-repeat;
+   height: 300px;
+   min-height: 450px;
+   margin-bottom: 70px;
+
+   &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba($color: #443b3b, $alpha: 0);
+
+      @include r(992) {
+         background-color: rgba($color: #443b3b, $alpha: 0.2);
+      }
+   }
+
+   @include r(992) {
+      background-size: cover;
+      background-position: 0 center;
+   }
+   @include r(576) {
+      background-position: -150px center;
+   }
+
+   &__contain {
+      display: flex;
+      justify-content: end;
+      margin-bottom: 70px;
+
+      @include r(992) {
+      justify-content: center;
+      align-items: center;
+      }
+   }
+
+   &__right {
+      max-width: 600px;
+      padding: 50px 50px 74px;
+      z-index: 2;
+
+      @include r(992) {
+         width: 100%;
+         padding: 30px 10px 44px;
+      }
+
+      @include r(768) {
+         width: 100%;
+         padding: 30px 10px 44px;
+      }
+   }
+
+   &__title {
+      font-size: 36px;
+      font-weight: 600;
+      max-width: 480px;
+      margin-bottom: 20px;
+
+      @include r(992) {
+         font-size: 28px;
+      }
+      @include r(768) {
+         font-size: 22px;
+      }
+   }
+
+      &__title span {
+         color: $eco-ocean;
+      }
+
+   &__list {
+      display: flex;
+      flex-direction: column;
+      row-gap: 12px;
+   }
+
+   &__item {
+      position: relative;
+      max-width: 517px;
+      font-size: 14px;
+      line-height: 1.7;
+      padding: 15px 10px 15px 36px;
+      border-radius: 9px;
+      background-color: #FFFFFFC9;
+      box-shadow: 0 13px 32px 0 #0000001A;
+
+      &::after {
+         content: '';
+         position: absolute;
+         top: 0;
+         left: 0;
+         width: 40px;
+         height: 100%;
+         background-image: url('../../images/sprite.svg#arrow-eco');
+         background-position: 5px center;
+         background-repeat: no-repeat;
+         background-size: 35px;
+      }
+   }
+}
+
+.eco-form {
+   border: 7px $hoverColor solid;
+   border-radius: 9px;
+   padding: 50px 40px;
+   background-image: url('../../images/girl-bg.webp');
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   margin-bottom: 60px;
+
+   @include r(768) {
+      padding: 30px 15px;
+      background-position: right center;
+   }
+
+   &__title {
+      width: fit-content;
+      font-size: 36px;
+      font-weight: 600;
+      color: $eco-ocean;
+      margin-bottom: 11px;
+      backdrop-filter: blur(8px);
+      border-radius: 5px;
+
+      @include r(992) {
+         font-size: 28px;
+      }
+      @include r(768) {
+         font-size: 22px;
+      }
+   }
+
+   &__text {
+      font-size: 18px;
+      font-weight: 500;
+      max-width: 580px;
+      margin-bottom: 23px;
+      backdrop-filter: blur(8px);
+      border-radius: 5px;
+   }
+
+   &__list {
+      display: flex;
+      flex-direction: column;
+      row-gap: 20px;
+      margin-bottom: 20px;
+   }
+
+   &__order {
+      padding: 15px 30px;
+      border-radius: 7px;
+      font-weight: 700;
+      color: #ffffff;
+      background-color: $eco-ocean;
+      outline: 0px solid transparent;
+      border: 0px solid transparent;
+      transition: all 0.3s ease-in-out;
+      cursor: pointer;
+
+      &:hover {
+         background-color: $hoverColor;
+      }
+
+      &:active {
+         transform: translate(1px, 2px);
+      }
+
+      @include r(435) {
+         width: 100%;
+      }
+   }
+}
+
+.fild {
+   outline: 0px solid transparent;
+   border: 1px solid $eco-ocean;
+   color: #C7C7C7;
+   border-radius: 5px;
+   padding: 15px 18px;
+   background-color: #FAFAFA;
+   max-width: 360px;
+   width: 100%;
+   transition: all 0.3s ease-in-out;
+   cursor: pointer;
+
+   &:hover {
+      border: 1px solid $hoverColor;
+   }
+
+   &:focus {
+      border: 1px solid $hoverColor;
+      color: $fontColor;
+   }
+
+   &::placeholder {
+      font-size: 14px;
+      color: #C7C7C7;
+   }
+}

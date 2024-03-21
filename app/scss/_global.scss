@@ -1,0 +1,61 @@
+html {
+   scroll-behavior: smooth;
+   scroll-padding-top: 30%;
+}
+
+body {
+   line-height: 1.15;
+   display: flex;
+   flex-direction: column;
+   background-color: #ffffff;
+   @extend %Rubik-400;
+   font-size: 16px;
+   color: $fontColor;
+}
+
+.main {
+   flex: 1 0 auto;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.container {
+   max-width: 1190px;
+   padding: 0 15px;
+   margin: 0 auto;
+}
+
+.lock {
+   overflow: hidden
+}
+
+.hover:hover {
+   color: $accent;
+   text-decoration: underline;
+}
+
+.btn {
+   transition: all 0.3s ease-in-out;
+   cursor: pointer;
+   
+   &:hover {
+      background-color: $accent;
+      color: #ffffff;
+   }
+
+   &:active {
+      transform: translate(1px, 2px);
+   }
+}
+

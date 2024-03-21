@@ -1,0 +1,137 @@
+.order {
+   
+   &__flex {
+      position: relative;
+      display: flex;
+      background-image: url('../../images/bunner-bottom.webp');
+      background-position: center right;
+      background-repeat: no-repeat;
+      background-size: cover;
+      padding: 52px 40px 52px 40px;
+      margin-bottom: 70px;
+
+      &::after {
+         content: '';
+         position: absolute;
+         top: 0;
+         left: 0;
+         right: 0;
+         bottom: 0;
+         background-color: rgba($color: #443b3b, $alpha: 0);
+
+         @include r(992) {
+            background-color: rgba($color: #443b3b, $alpha: 0.4);
+            z-index: 2;
+         }
+      }
+   }
+   
+   &__text {
+      font-size: 36px;
+      font-weight: 400;
+      max-width: 780px;
+      margin-bottom: 8px;
+      line-height: 1;
+      color: #ffffff;
+
+      @include r(992) {
+         font-size: 24px;
+      }
+   }
+
+   &__slice {
+      font-weight: 600;
+   }
+
+   &__text-bottom {
+      display: block;
+      font-size: 18px;
+      font-weight: 500;
+      margin-bottom: 24px;
+      color: #ffffff;
+   }
+
+   &__left {
+      z-index: 3;
+   }
+
+   &__right {
+      width: 530px;
+      height: 350px;
+   }
+
+   &__slider {
+      position: absolute;
+      right: 0;
+      top: 20%;
+      width: 530px;
+      height: 330px;
+      z-index: 2;
+
+      @include r(992) {
+         z-index: 1;
+         width: 450px;
+      }
+   }
+   
+   &__slid {
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: auto 100%;
+      width: 100%;
+      height: 100%;
+   }
+   
+   .slide-1 {
+      background-image: url('../../images/banner-btm-1.avif');
+   }
+   .slide-2 {
+      background-image: url('../../images/banner-btm-2.avif');
+   }
+   .slide-3 {
+      background-image: url('../../images/banner-btm-3.avif');
+   }
+   .slide-4 {
+      background-image: url('../../images/banner-btm-4.avif');
+   }
+   .slide-5 {
+      background-image: url('../../images/banner-btm-5.avif');
+   }
+}
+
+.order-form {
+
+   &__list {
+      display: flex;
+      flex-direction: column;
+      row-gap: 20px;
+      margin-bottom: 20px;
+   }
+
+   &__inpute {
+      @include r(576) {
+         max-width: 100%;
+      }
+   }
+
+   &__order {
+      padding: 15px 30px;
+      border-radius: 7px;
+      font-weight: 700;
+      color: #ffffff;
+      background-color: $hoverColor;
+      outline: 0px solid transparent;
+      border: 0px solid transparent;
+      transition: all 0.3s ease-in-out;
+      cursor: pointer;
+
+      &:hover {
+         background-color: $hoverColor;
+         box-shadow: 0 5px 20px 0 #EEF7FF;
+      }
+
+      &:active {
+         transform: translate(1px, 2px);
+      }
+   }
+}
